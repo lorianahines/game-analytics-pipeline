@@ -96,6 +96,18 @@ def getEvent(event_type):
         'shorts'
 
     ]
+
+    climate_region = [
+        'northwest',
+        'west',
+        'west north central',
+        'southwest',
+        'south',
+        'upper midwest',
+        'central',
+        'northeast',
+        'southeast'
+    ]
     
     device = [
         'iOS',
@@ -127,7 +139,9 @@ def getEvent(event_type):
         'login': {
             'event_data': {
                 'device': str(numpy.random.choice(device, 1, p=[0.3, 0.5, 0.2])[0]),
-                'last_login_time': int(time.time())-random.randint(40000,4000000)
+                'climate_region': str(numpy.random.choice(climate_region, 1, p=[0.3, 0.1, 0.2, 0.05, 0.05, 0.17, 0.05, 0.03, 0.05])[0]),
+                'last_login_time': int(time.time())-random.randint(40000,4000000),
+                'user_id': random.randint(1, 400)
             }
         },
         
