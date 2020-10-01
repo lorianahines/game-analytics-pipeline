@@ -75,7 +75,7 @@ def getEventType():
         8: 'clicked_ad',
         9: 'reviewed_item'
   }
-  return event_types[numpy.random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9], 1, p=[0.11, 0.07, 0.18, 0.16, 0.05, 0.08, 0.19, 0.08, 0.08])[0]]
+  return event_types[numpy.random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9], 1, p=[0.11, 0.19, 0.18, 0.16, 0.05, 0.08, 0.07, 0.08, 0.08])[0]]
   
 # Generate a randomized event from preconfigured sample data
 def getEvent(event_type):
